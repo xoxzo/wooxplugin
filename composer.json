@@ -1,0 +1,29 @@
+{
+  "name": "xoxzo/woocommerce_plugin",
+  "description": "Xoxzo telephony library",
+  "authors": [
+      {
+          "name": "Xoxzo Inc",
+          "email": "iqbal@xoxzo.com"
+      }
+  ],
+
+  
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/xoxzo/xoxzo.cloudphp.git"
+    }
+  ],
+    "require": {
+    "xoxzo/cloudphp": "*"
+  },
+
+
+
+   "config": {
+         "vendor-dir": "xoxzo_cloudphp"
+  }
+
+
+}
