@@ -200,10 +200,10 @@ class XoxzoListTableSms extends \WP_List_Table {
             if($node_count==0) {
                 $redirect_url = add_query_arg(
                     array(
-                        'section' => esc_attr($_POST['section']),
-                        'page' => esc_attr($_POST['page']),
-                        'tab' => esc_attr($_POST['tab']),
-                        'paged' => esc_attr($_POST['paged']),
+                        'section' => esc_html($_POST['section']),
+                        'page' => esc_html($_POST['page']),
+                        'tab' => esc_html($_POST['tab']),
+                        'paged' => esc_html($_POST['paged']),
                     ),
                     admin_url( 'admin.php' )
                 );
@@ -213,26 +213,46 @@ class XoxzoListTableSms extends \WP_List_Table {
                 exit(0);
             }
 
-            $curl_arr = array();
-            $master = curl_multi_init();
-            for($i = 0; $i < $node_count; $i++)  {
-                $url =$urls[$i];
-                $curl_arr[$i] = curl_init($url);
-                curl_setopt($curl_arr[$i], CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($curl_arr[$i], CURLOPT_USERPWD, get_option("woocommerce_xoxzo_sid").":".get_option("woocommerce_xoxzo_auth_token"));
-                curl_setopt($curl_arr[$i], CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-                curl_multi_add_handle($master, $curl_arr[$i]);
-            }
 
-            do {
-                curl_multi_exec($master,$running);
-            }
-            while($running > 0);
+                
+        $encodedAuth = base64_encode(get_option("woocommerce_xoxzo_sid").":".get_option("woocommerce_xoxzo_auth_token"));
 
-            $results = [];
-            for($i = 0; $i < $node_count; $i++)  {
-                $results[] = curl_multi_getcontent  ( $curl_arr[$i]  );
-            }
+        $response = wp_remote_request( $url,
+            array(
+                "headers" => array(
+                    "Authorization" => "Basic ".$encodedAuth
+                ),
+                "method" => "GET",
+            )
+        );
+
+    
+        $results = json_decode($response['body'], true);
+
+       
+
+
+
+            // $curl_arr = array();
+            // $master = curl_multi_init();
+            // for($i = 0; $i < $node_count; $i++)  {
+            //     $url =$urls[$i];
+            //     $curl_arr[$i] = curl_init($url);
+            //     curl_setopt($curl_arr[$i], CURLOPT_RETURNTRANSFER, true);
+            //     curl_setopt($curl_arr[$i], CURLOPT_USERPWD, get_option("woocommerce_xoxzo_sid").":".get_option("woocommerce_xoxzo_auth_token"));
+            //     curl_setopt($curl_arr[$i], CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+            //     curl_multi_add_handle($master, $curl_arr[$i]);
+            // }
+
+            // do {
+            //     curl_multi_exec($master,$running);
+            // }
+            // while($running > 0);
+
+            // $results = [];
+            // for($i = 0; $i < $node_count; $i++)  {
+            //     $results[] = curl_multi_getcontent  ( $curl_arr[$i]  );
+            // }
 
             $table_name = (new \Xoxzo)->table_name__status();
             foreach($results as $result) {
@@ -254,12 +274,12 @@ class XoxzoListTableSms extends \WP_List_Table {
 
             $redirect_url = add_query_arg(
                 array(
-                    'section' => esc_attr($_POST['section']),
-                    'page' => esc_attr($_POST['page']),
-                    'tab' => esc_attr($_POST['tab']),
-                    'paged' => esc_attr($_POST['paged']),
+                    'section' => esc_html($_POST['section']),
+                    'page' => esc_html($_POST['page']),
+                    'tab' => esc_html($_POST['tab']),
+                    'paged' => esc_html($_POST['paged']),
                 ),
-                site_url( '/wp-admin/admin.php' )
+                admin_url( '/wp-admin/admin.php' )   
             );
             wp_redirect(
                 $redirect_url
