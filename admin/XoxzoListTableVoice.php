@@ -224,10 +224,10 @@ class XoxzoListTableVoice extends \WP_List_Table {
             if($node_count==0) {
                 $redirect_url = add_query_arg(
                     array(
-                        'section' => esc_attr($_POST['section']),
-                        'page' => esc_attr($_POST['page']),
-                        'tab' => esc_attr($_POST['tab']),
-                        'paged' => esc_attr($_POST['paged']),
+                        'section' => esc_html($_POST['section']),
+                        'page' => esc_html($_POST['page']),
+                        'tab' => esc_html($_POST['tab']),
+                        'paged' => esc_html($_POST['paged']),
                     ),
                     admin_url( 'admin.php' )
                 );
@@ -245,6 +245,7 @@ class XoxzoListTableVoice extends \WP_List_Table {
                 curl_setopt($curl_arr[$i], CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($curl_arr[$i], CURLOPT_USERPWD, get_option("woocommerce_xoxzo_sid").":".get_option("woocommerce_xoxzo_auth_token"));
                 curl_setopt($curl_arr[$i], CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+                
                 curl_multi_add_handle($master, $curl_arr[$i]);
             }
 
@@ -279,10 +280,10 @@ class XoxzoListTableVoice extends \WP_List_Table {
 
             $redirect_url = add_query_arg(
                 array(
-                    'section' => esc_attr($_POST['section']),
-                    'page' => esc_attr($_POST['page']),
-                    'tab' => esc_attr($_POST['tab']),
-                    'paged' => esc_attr($_POST['paged']),
+                  'section' => esc_html($_POST['section']),
+                        'page' => esc_html($_POST['page']),
+                        'tab' => esc_html($_POST['tab']),
+                        'paged' => esc_html($_POST['paged']),
                 ),
                 admin_url('/wp-admin/admin.php')
             );

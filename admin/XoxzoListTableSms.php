@@ -200,10 +200,10 @@ class XoxzoListTableSms extends \WP_List_Table {
             if($node_count==0) {
                 $redirect_url = add_query_arg(
                     array(
-                        'section' => esc_attr($_POST['section']),
-                        'page' => esc_attr($_POST['page']),
-                        'tab' => esc_attr($_POST['tab']),
-                        'paged' => esc_attr($_POST['paged']),
+                        'section' => esc_html($_POST['section']),
+                        'page' => esc_html($_POST['page']),
+                        'tab' => esc_html($_POST['tab']),
+                        'paged' => esc_html($_POST['paged']),
                     ),
                     admin_url( 'admin.php' )
                 );
@@ -254,12 +254,12 @@ class XoxzoListTableSms extends \WP_List_Table {
 
             $redirect_url = add_query_arg(
                 array(
-                    'section' => esc_attr($_POST['section']),
-                    'page' => esc_attr($_POST['page']),
-                    'tab' => esc_attr($_POST['tab']),
-                    'paged' => esc_attr($_POST['paged']),
+                    'section' => esc_html($_POST['section']),
+                    'page' => esc_html($_POST['page']),
+                    'tab' => esc_html($_POST['tab']),
+                    'paged' => esc_html($_POST['paged']),
                 ),
-                site_url( '/wp-admin/admin.php' )
+                admin_url( '/wp-admin/admin.php' )   
             );
             wp_redirect(
                 $redirect_url
