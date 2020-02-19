@@ -1,4 +1,15 @@
-# Description
+=== Xoxzo ===
+Contributors: fahidjavid, almond55
+Donate link: None
+Tags: SMS, voice, calls, notifications
+Requires at least: 1.0
+Tested up to: 1.0
+Stable tag: 1.0
+Requires PHP: 5.2.4
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+==  Description == 
 
 This plugin triggers sms and voice call using xoxzo telephony service.  
 Some triggers are based on woocommmerce email events.
@@ -31,7 +42,7 @@ The following are events that trigger sms/voice notification:
 13. Reset password
 14. New account
 
-# Installation
+== Installation ==
 1. This plugin can be install as it is.
 2. The plugin uses xoxzo php client library. The library is in 'xoxzo_cloudphp' folder, to move the plugin to any directory change the following line:
 
@@ -58,27 +69,37 @@ The following are events that trigger sms/voice notification:
  order deny,allow   
  deny from all
 
-# Frequently Asked Questions
+== Frequently Asked Questions ==
 
 1. Does sms and voice behave the same?  
     Almost. For order cancel, and sms is send to admin when customer cancel, to customer when admin cancel. For voice, the default behave is always sending to admin.(Regardless who cancel).
 
 2. How does customer cancel?  
-    A cancel button will appear for each item in an order, when the order is in "pending payment" status. This is woocommerce behavior, under 'MyAccount' page.
+    A cancel button will appear for each item in an order, when the order is in "pending payment" status. This is woocommerce behavior, under 'My Account' page.
 
 3. Why does my cost of sending sms/voice is showing zero?  
     Refresh to see the updated status of each sms/voice call. This status is retrieved from Xoxzo telephony service.
 
-4. Can i add sms/voice callback for any events in woocommerce/wordpress?  
+4. Can I add sms/voice callback for any events in WooCommerce/WordPress?  
     Such functionality is not supported at the moment(Nor is recommended).
 
 5. I enabled sms/voice for a particular events, but i don't see it under sms and voice status.  
     Try checking in 'Error Status' 
 
 6. How does the cost of each sms/voice work?  
-    Refer to xoxzo pricing page
+    Refer to Xoxzo pricing page
 
-# Changelog
+ == Screenshots ==
+
+1. None 
+
+== Changelog ==
 
 = 1.0 =   
 * First version *
+
+== Upgrade Notice ==
+
+= 1.0 =
+* First version of Xoxzo WooCommerce plugin *
+

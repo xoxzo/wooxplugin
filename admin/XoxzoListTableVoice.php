@@ -199,10 +199,6 @@ class XoxzoListTableVoice extends \WP_List_Table {
         if(!in_array($current_action, ['bulk-voice-refresh']) or !is_array($_POST[$current_action])) {
             return;
         }
-        // verify the nonce from response.
-//        if ( ! wp_verify_nonce( esc_attr( $_REQUEST['_wpnonce'] ), 'wc_refresh_sms_status' ) ) {
-//            die( 'Go get a life script kiddies' );
-//        }
 
         if ( $current_action=='bulk-voice-refresh') {
             $list_of_ids = $_POST['bulk-voice-refresh'];
@@ -250,29 +246,6 @@ class XoxzoListTableVoice extends \WP_List_Table {
 
     
         $results = json_decode($response['body'], true);
-
-
-            // $curl_arr = array();
-            // $master = curl_multi_init();
-            // for($i = 0; $i < $node_count; $i++)  {
-            //     $url =$urls[$i];
-            //     $curl_arr[$i] = curl_init($url);
-            //     curl_setopt($curl_arr[$i], CURLOPT_RETURNTRANSFER, true);
-            //     curl_setopt($curl_arr[$i], CURLOPT_USERPWD, get_option("woocommerce_xoxzo_sid").":".get_option("woocommerce_xoxzo_auth_token"));
-            //     curl_setopt($curl_arr[$i], CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-                
-            //     curl_multi_add_handle($master, $curl_arr[$i]);
-            // }
-
-            // do {
-            //     curl_multi_exec($master,$running);
-            // }
-            // while($running > 0);
-
-            // $results = [];
-            // for($i = 0; $i < $node_count; $i++)  {
-            //     $results[] = curl_multi_getcontent  ( $curl_arr[$i]  );
-            // }
 
             foreach($results as $result) {
                 $data = json_decode($result);
