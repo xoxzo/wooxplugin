@@ -1,5 +1,6 @@
 === Xoxzo ===
-Contributors: fahidjavid, almond55
+
+Contributors: fahidjavid, almond55, iq8al
 Donate link: None
 Tags: SMS, voice, calls, notifications
 Requires at least: 1.0
@@ -43,6 +44,7 @@ The following are events that trigger sms/voice notification:
 14. New account
 
 == Installation ==
+
 1. This plugin can be install as it is.
 2. The plugin uses xoxzo php client library. The library is in 'xoxzo_cloudphp' folder, to move the plugin to any directory change the following line:
 
