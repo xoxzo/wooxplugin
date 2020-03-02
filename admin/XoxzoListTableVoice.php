@@ -199,6 +199,10 @@ class XoxzoListTableVoice extends \WP_List_Table {
         if(!in_array($current_action, ['bulk-voice-refresh']) or !is_array($_POST[$current_action])) {
             return;
         }
+        // verify the nonce from response.
+//        if ( ! wp_verify_nonce( esc_attr( $_REQUEST['_wpnonce'] ), 'wc_refresh_sms_status' ) ) {
+//            die( 'Go get a life script kiddies' );
+//        }
 
         if ( $current_action=='bulk-voice-refresh') {
             $list_of_ids = $_POST['bulk-voice-refresh'];
@@ -220,10 +224,10 @@ class XoxzoListTableVoice extends \WP_List_Table {
             if($node_count==0) {
                 $redirect_url = add_query_arg(
                     array(
-                        'section' => esc_html($_POST['section']),
-                        'page' => esc_html($_POST['page']),
-                        'tab' => esc_html($_POST['tab']),
-                        'paged' => esc_html($_POST['paged']),
+                        'section' => sanitize_text_field($_POST['section']),
+                        'page' => sanitize_text_field($_POST['page']),
+                        'tab' => sanitize_text_field($_POST['tab']),
+                        'paged' => sanitize_text_field($_POST['paged']),
                     ),
                     admin_url( 'admin.php' )
                 );
@@ -233,19 +237,27 @@ class XoxzoListTableVoice extends \WP_List_Table {
                 exit(0);
             }
 
-        $encodedAuth = base64_encode(get_option("woocommerce_xoxzo_sid").":".get_option("woocommerce_xoxzo_auth_token"));
+            $curl_arr = array();
+            $master = curl_multi_init();
+            for($i = 0; $i < $node_count; $i++)  {
+                $url =$urls[$i];
+                $curl_arr[$i] = curl_init($url);
+                curl_setopt($curl_arr[$i], CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($curl_arr[$i], CURLOPT_USERPWD, get_option("woocommerce_xoxzo_sid").":".get_option("woocommerce_xoxzo_auth_token"));
+                curl_setopt($curl_arr[$i], CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+                
+                curl_multi_add_handle($master, $curl_arr[$i]);
+            }
 
-        $response = wp_remote_request( $url,
-            array(
-                "headers" => array(
-                    "Authorization" => "Basic ".$encodedAuth
-                ),
-                "method" => "GET",
-            )
-        );
+            do {
+                curl_multi_exec($master,$running);
+            }
+            while($running > 0);
 
-    
-        $results = json_decode($response['body'], true);
+            $results = [];
+            for($i = 0; $i < $node_count; $i++)  {
+                $results[] = curl_multi_getcontent  ( $curl_arr[$i]  );
+            }
 
             foreach($results as $result) {
                 $data = json_decode($result);
@@ -268,10 +280,10 @@ class XoxzoListTableVoice extends \WP_List_Table {
 
             $redirect_url = add_query_arg(
                 array(
-                  'section' => esc_html($_POST['section']),
-                        'page' => esc_html($_POST['page']),
-                        'tab' => esc_html($_POST['tab']),
-                        'paged' => esc_html($_POST['paged']),
+                  'section' => sanitize_text_field($_POST['section']),
+                        'page' => sanitize_text_field($_POST['page']),
+                        'tab' => sanitize_text_field($_POST['tab']),
+                        'paged' => sanitize_text_field($_POST['paged']),
                 ),
                 admin_url('/wp-admin/admin.php')
             );
