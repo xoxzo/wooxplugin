@@ -80,7 +80,7 @@ class XoxzoVoiceResponse {
         $playback = "";
         $tts = "";
         if(isset($_POST['type']) and !empty($_POST['type'])) {
-            $type = $_POST["type"];
+            $type = sanitize_text_field($_POST["type"]);
         }
         if(isset($_POST['caller']) and !empty($_POST['caller'])) {
             $caller = $_POST["caller"];
@@ -92,10 +92,10 @@ class XoxzoVoiceResponse {
             }
         }
         if(isset($_POST['playback']) and !empty($_POST['playback'])) {
-            $playback = trim($_POST["playback"]);
+            $playback = sanitize_text_field(trim($_POST["playback"]));
         }
         if(isset($_POST['tts']) and !empty($_POST['tts'])) {
-            $tts = trim($_POST["tts"]);
+            $tts = sanitize_text_field(trim($_POST["tts"]));
         }
 
         $replies = [

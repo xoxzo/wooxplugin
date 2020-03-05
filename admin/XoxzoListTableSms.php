@@ -180,7 +180,7 @@ class XoxzoListTableSms extends \WP_List_Table {
 //        }
 
         if ( $current_action=='bulk-sms-refresh') {
-            $list_of_ids = $_POST['bulk-sms-refresh'];
+            $list_of_ids = sanitize_text_field($_POST['bulk-sms-refresh']);
             foreach($list_of_ids as $i => $id){
                 $list_of_ids[$i] = is_numeric($id) ? intval($id) : 0;
             }
