@@ -49,7 +49,7 @@ class XoxzoSmsResponse {
             }
         }
         if(isset($_POST['message']) and !empty($_POST['message'])) {
-            $message = $_POST["message"];
+            $message = sanitize_text_field($_POST["message"]);
         }
 
         $replies = [
