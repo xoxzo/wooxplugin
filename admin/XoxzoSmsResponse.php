@@ -45,7 +45,7 @@ class XoxzoSmsResponse {
         if(isset($_POST['recipients']) and !empty($_POST['recipients'])) {
             $recipients = array();
             foreach(explode(",", $_POST["recipients"]) as $recipient) {
-                $recipients[] = trim($recipient);
+                $recipients[] = sanitize_text_field(trim($recipient));
             }
         }
         if(isset($_POST['message']) and !empty($_POST['message'])) {
