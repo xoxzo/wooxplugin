@@ -283,11 +283,11 @@ class XoxzoAdminSettingTab {
                 });
                 ?>
                 <ul class="subsubsub">
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>" class="current">SMS</a></li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>" class="current">SMS</a></li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
                 </ul>
                 <br class="clear">
                 <?php
@@ -296,11 +296,11 @@ class XoxzoAdminSettingTab {
             else {
                 ?>
                 <ul class="subsubsub">
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>" class="current">SMS</a></li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>" class="current">SMS</a></li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
                 </ul>
                 <br class="clear">
                 <div class="woocommerce-BlankState woocommerce-BlankState--api">
@@ -338,11 +338,11 @@ class XoxzoAdminSettingTab {
                 });
                 ?>
                 <ul class="subsubsub">
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>" class="current">Voice</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>" class="current">Voice</a> </li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
                 </ul>
                 <br class="clear">
                 <?php
@@ -351,11 +351,11 @@ class XoxzoAdminSettingTab {
             else {
                 ?>
                 <ul class="subsubsub">
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>" class="current">Voice</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>" class="current">Voice</a> </li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>">Errors</a> </li>
                 </ul>
                 <br class="clear">
                 <div class="woocommerce-BlankState woocommerce-BlankState--api">
@@ -393,11 +393,11 @@ class XoxzoAdminSettingTab {
                 });
                 ?>
                 <ul class="subsubsub">
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>" class="current">Errors</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>" class="current">Errors</a> </li>
                 </ul>
                 <br class="clear">
                 <?php
@@ -406,11 +406,11 @@ class XoxzoAdminSettingTab {
             else {
                 ?>
                 <ul class="subsubsub">
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_SMS?>">SMS</a></li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section=<?php echo Xoxzo::ADMIN_SECTION_STATUS_VOICE?>">Voice</a> </li>
                     |
-                    <li><a href="/wp-admin/admin.php?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>" class="current">Errors</a> </li>
+                    <li><a href="<?php admin_url( 'admin.php' ); ?>?page=<?php echo Xoxzo::PAGE;?>&amp;tab=<?php echo Xoxzo::TAB;?>&amp;section==<?php echo Xoxzo::ADMIN_SECTION_STATUS_ERROR?>" class="current">Errors</a> </li>
                 </ul>
                 <br class="clear">
                 <div class="woocommerce-BlankState woocommerce-BlankState--api">
