@@ -83,12 +83,12 @@ class XoxzoVoiceResponse {
             $type = sanitize_text_field($_POST["type"]);
         }
         if(isset($_POST['caller']) and !empty($_POST['caller'])) {
-            $caller = $_POST["caller"];
+            $caller = sanitize_text_field($_POST["caller"]);
         }
         if(isset($_POST['recipients']) and !empty($_POST['recipients'])) {
             $recipients = array();
             foreach(explode(",", $_POST["recipients"]) as $recipient) {
-                $recipients[] = trim($recipient);
+                $recipients[] = sanitize_text_field(trim($recipient));
             }
         }
         if(isset($_POST['playback']) and !empty($_POST['playback'])) {
