@@ -254,7 +254,7 @@ class XoxzoListTableSms extends \WP_List_Table {
                     'tab' => sanitize_text_field($_POST['tab']),
                     'paged' => sanitize_text_field($_POST['paged']),
                 ),
-                admin_url( '/wp-admin/admin.php' )   
+                admin_url( 'admin.php' )   
             );
             wp_redirect(
                 $redirect_url
