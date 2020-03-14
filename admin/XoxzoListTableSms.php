@@ -252,7 +252,7 @@ class XoxzoListTableSms extends \WP_List_Table {
                     'section' => sanitize_text_field($_POST['section']),
                     'page' => sanitize_text_field($_POST['page']),
                     'tab' => sanitize_text_field($_POST['tab']),
-                    'paged' => sansanitize_text_fielditize_text_field($_POST['paged']),
+                    'paged' => sanitize_text_field($_POST['paged']),
                 ),
                 admin_url( '/wp-admin/admin.php' )   
             );
