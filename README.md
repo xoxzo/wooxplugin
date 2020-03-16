@@ -1,6 +1,6 @@
 === Xoxzo ===
 
-Contributors: fahidjavid, almond55, iq8al
+Contributors: xoxzo
 Donate link: None
 Tags: SMS, voice, calls, notifications
 Requires at least: 1.0
