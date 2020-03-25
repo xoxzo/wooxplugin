@@ -4,7 +4,7 @@ Contributors: xoxzo
 Donate link: None
 Tags: SMS, voice, calls, notifications
 Requires at least: 1.0
-Tested up to: 1.0
+Tested up to: 5.3.2
 Stable tag: 1.0
 Requires PHP: 5.2.4
 License: GPLv2 or later
