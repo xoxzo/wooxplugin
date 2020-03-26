@@ -1,4 +1,4 @@
-=== Xoxzo ===
+=== Xoxzo - SMS and voice notification plugin for WooCommerce  ===
 
 Contributors: xoxzo
 Donate link: None
