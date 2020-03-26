@@ -10,11 +10,11 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Xoxzo - SMS & Voice Notification for Woocommerce
- * Plugin URI:        https://xoxzo.com/woocommerce-notification
- * Description:       Send sms & voice notification of WooCommerce events(based on WooCommerce email events) using the Xoxzo telephony service.
+ * Plugin URI:        https://github.com/xoxzo/wooxplugin
+ * Description:       Send SMS & voice notification of WooCommerce events (based on WooCommerce email events) using the Xoxzo Telephony Service.
  * Version:           1.0.0
- * Author:            Xoxzo
- * Author URI:        https://www.xoxzo.com
+ * Author:            Xoxzo Inc.
+ * Author URI:        https://www.xoxzo.com/
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       wc-xoxzo
